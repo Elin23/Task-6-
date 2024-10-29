@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSaw | Book Store</title>
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!--font awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Main CSS file-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/images/icon.png">
+</head>
+
+<body>
+    <div class="cs-loader fixed-top bg-main d-flex align-items-center justify-content-center w-100 h-100" id="loader">
+        <div class="cs-loader-inner position-absolute text-center">
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+            <span>●</span>
+        </div>
+    </div>
+    <!--Start header-->
+    <header class="bg-main main-font">
+
+        <!--Start Nav-->
+        <nav class="navbar navbar-expand-lg py-3 bg-main border-bottom border-1 border-secondary-subtle fixed-top z-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/logo.png" class="object-fit-cover" alt="logo">
+                </a>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="text-uppercase ps-1">menu</span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarNavDropdown">
+                    <ul class="navbar-nav pe-3 letter-spacing-wider gap-3 text-uppercase fw-medium align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#featured">Featured</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#popular">Popular</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--End Nav-->
+
+        <!-- Start Carousel -->
+        <div id="carouselExampleCaptions" class="carousel py-80 slide carousel-fade">
+            <div class="carousel-inner overflow-visible">
+                <!-- Start slide -1- -->
+                <div
+                    class="carousel-item active d-flex align-items-center justify-content-center gap-5 flex-row-reverse flex-wrap">
+                    <img src="./assets/images/main-banner1.jpg" class="col-12 col-lg-6 img-size mt-3 object-fit-cover"
+                         alt="book-2">
+                    <div class="carousel-caption col-12 col-lg-4 text-center text-lg-start">
+                        <h2
+                            class="heading-font fs-big fw-semibold text-dark text-capitalize mb-3 lh-base w-75 mx-auto mx-lg-0">
+                            Life of
+                            the Wild</h2>
+                        <p class="text-body-tertiary fw-semibold lh-lg col-lg-9 mx-4 mx-lg-0">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum
+                            enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis urna, a eu.
+                        </p>
+                        <button type="button"
+                            class="button position-relative d-flex align-items-center cursor-pointer border-1 bg-transparent">
+                            <span class="button__text fw-bold text-uppercase">Read More</span>
+                            <span
+                                class="button__icon position-absolute d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-arrow-right"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <!-- End slide -1- -->
+
+                <!-- Start slide -2- -->
+                <div
+                    class="carousel-item d-flex align-items-center justify-content-center gap-5 flex-row-reverse flex-wrap">
+                    <img src="./assets/images/main-banner2.jpg" class="col-12 col-lg-6 img-size mt-3 object-fit-cover"
+                         alt="book-2">
+                    <div class="carousel-caption col-12 col-lg-4 text-center text-lg-start px-4 mx-5">
+                        <h2
+                            class="heading-font fs-big fw-semibold text-dark text-capitalize mb-3 lh-base mx-auto mx-lg-0">
+                            Birds
+                            gonna be Happy </h2>
+                        <p class="text-body-tertiary fw-semibold lh-lg col-lg-9">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum
+                            enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis urna, a eu.
+                        </p>
+                        <button type="button"
+                            class="button position-relative d-flex align-items-center cursor-pointer border-1 bg-transparent">
+                            <span class="button__text fw-bold text-uppercase">Read More</span>
+                            <span
+                                class="button__icon position-absolute d-flex align-items-center justify-content-center">
+                                <i class="fa-solid fa-arrow-right"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <!-- End slide -2- -->
+            </div>
+
+            <button class="carousel-control-prev border-secondary-emphasis rounded-circle" type="button"
+                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" aria-label="Previous slide">
+                <i class="fa-solid fa-arrow-left fs-5 text-secondary-emphasis"></i>
+            </button>
+            <button class="carousel-control-next border-secondary-emphasis rounded-circle" type="button"
+                data-bs-target="#carouselExampleCaptions" data-bs-slide="next" aria-label="Next slide">
+                <i class="fa-solid fa-arrow-right fs-5 text-secondary-emphasis"></i>
+            </button>
+        </div>
+        <!-- End Carousel -->
+
+
+    </header>
+    <!--End header-->
+
+    <!--Start Main-->
+    <main>
+
+        <!--Start Our Clients-->
+        <section class="clients py-105 d-flex align-items-center justify-content-center bg-secondary">
+            <div class="row align-items-center justify-content-center gap-4 w-75">
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3 d-flex align-items-center justify-content-center ">
+                    <img src="./assets/images/client-image1.png" class="img-fluid" alt="client-1">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3 d-flex align-items-center justify-content-center">
+                    <img src="./assets/images/client-image2.png " class="img-fluid" alt="client-2">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3 d-flex align-items-center justify-content-center">
+                    <img src="./assets/images/client-image3.png" class="img-fluid" alt="client-3">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3 d-flex align-items-center justify-content-center">
+                    <img src="./assets/images/client-image4.png" class="img-fluid" alt="client-4">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3 d-flex align-items-center justify-content-center">
+                    <img src="./assets/images/client-image5.png" class="img-fluid" alt="client-5">
+                </div>
+            </div>
+        </section>
+        <!--End Our Clients-->
+
+        <!--Start Featured Books-->
+        <section class="featured bg-main py-105" id="featured">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title my-auto text-center">
+                            <span class="text-body-tertiary text-uppercase">Some quality items</span>
+                            <h2 class="position-relative my-5 heading-font fw-semibold title-font-size">Featured Books
+                            </h2>
+                        </div>
+                        <div class="booksList mt-5 mt-lg-0">
+                            <div class="row justify-content-center">
+                                <!-- Books will be dynamically added here -->
+                            </div>
+                        </div>
+                        <div class="row mt-4 border-top border-1 border-secondary-subtle justify-content-end">
+                            <button type="button"
+                                class="button position-relative d-flex align-items-center bg-transparent border-0 mt-3">
+                                <span class="all-products button__text fw-bold text-uppercase text-black">View All
+                                    Products</span>
+                                <span
+                                    class="button__icon position-absolute d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-arrow-right text-black"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Featured Books-->
+
+        <!--Start Best selling-->
+        <section class="best-sellings bg-secondary py-105">
+            <div class="container d-flex align-items-center justify-content-center">
+                <div class="col-lg-9 col-md-12">
+                    <div class="row mx-0">
+                        <div class="col-md-6 d-flex justify-content-center px-0">
+                            <div class="img d-flex align-items-center justify-content-center">
+                                  <!-- Book Img be dynamically added here -->
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-5 ">
+                            <h2
+                                class="heading display-4 text-capitalize fw-semibold heading-font position-relative">
+                                best selling book</h2>
+                            <div class="info my-5 d-flex flex-column gap-4">
+                                  <!-- Book Info will be dynamically added here -->
+                            </div>
+                            <button type="button"
+                                class="button position-relative d-flex align-items-start bg-transparent border-0">
+                                <span class="button__text fw-bold text-uppercase text-black">Shop it Now</span>
+                                <span
+                                    class="button__icon position-absolute d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-arrow-right text-black"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Best selling-->
+
+        <!--Start Popular Books-->
+        <section class="popular bg-main py-105" id="popular">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title my-auto text-center">
+                            <span class="text-body-tertiary text-uppercase">Some quality items</span>
+                            <h2 class="position-relative my-5 heading-font fw-semibold title-font-size">Popular Books
+                            </h2>
+                        </div>
+                        <ul
+                            class="nav nav-tabs my-5 d-flex justify-content-center gap-3 border-0 fw-semibold text-body-tertiary">
+                            <li class="nav-item">
+                                <a class="nav-link text-reset border-0 active" data-cat="all" aria-current="page"
+                                    href="#">All Genre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-reset border-0" data-cat="business" href="#">Business</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-reset border-0" data-cat="technology" href="#">Technology</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-reset border-0" data-cat="romantic" href="#">Romantic</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-reset border-0" data-cat="adventure" href="#">Adventure</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-reset border-0" data-cat="fictional" href="#">Fictional</a>
+                            </li>
+                        </ul>
+                        <div class="booksList mt-5 mt-lg-0">
+                            <div class="row justify-content-center">
+                                <!-- Books will be dynamically added here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Popular Books-->
+
+        <!--Start Subscribe-->
+        <section class="subscribe bg-secondary py-105">
+            <div class="container d-flex align-items-center justify-content-center">
+                <div class="col-lg-9 col-md-12">
+                    <div class="row">
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <h2 class="heading display-4 text-capitalize fw-semibold heading-font position-relative">
+                                Subscribe to our newsletter</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="my-4 text-body-tertiary fw-semibold lh-lg w-75">
+                                Sed eu feugiat amet, libero ipsum enim pharetra hac dolor sit amet, consectetur. Elit
+                                adipiscing enim pharetra hac.
+                            </p>
+                            <form class="row g-3 border-bottom border-1 border-dark" style="max-width: fit-content;">
+                                <div class="col-auto">
+                                    <input type="email" class="form-control bg-transparent rounded-0 border-0"
+                                        id="inputEmail" placeholder="Enter your email address">
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit"
+                                        class="btn send mb-3 text-uppercase bg-transparent fw-semibold">
+                                        Send
+                                        <i class="fa-solid fa-paper-plane ms-2 send-icon"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Subscribe-->
+
+    </main>
+    <!--End Main-->
+
+    <!--Start Footer-->
+
+    <footer class="bg-main py-105 pb-0">
+        <div class="container">
+            <div class="row mb-5 gy-5 links">
+                <div
+                    class="col-md-6 col-lg-3 d-flex align-items-center justify-content-center gap-4 flex-column me-lg-5">
+                    <a href="index.html"><img src="./assets/images/logo.png" alt="logo"></a>
+                    <p class="text-body-tertiary fw-semibold lh-lg text-center">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.
+                        Sagittis sed ptibus liberolectus nonet psryroin.
+                        Amet sed lorem posuere sit iaculis amet, ac urna.
+                        Adipiscing fames semper erat ac in suspendisse iaculis.
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-2 text-center">
+                    <h5 class="text-black text-capitalize heading-font mb-4 fs-4">about us</h5>
+                    <ul class="list-unstyled lh-lg">
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">vision</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">articles</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">careers</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">service terms</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">donate</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-2 text-center">
+                    <h5 class="text-black text-capitalize heading-font mb-4 fs-4">discover</h5>
+                    <ul class="list-unstyled lh-lg">
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">Home</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">Books</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">Authors</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">Subjects</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">Advanced Search</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-2 text-center">
+                    <h5 class="text-black text-capitalize heading-font mb-4 fs-4">my account</h5>
+                    <ul class="list-unstyled lh-lg">
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">Sign In</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">View Cart</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">My Wishtlist</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">rack My Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-2 text-center">
+                    <h5 class="text-black text-capitalize heading-font mb-4 fs-4">help</h5>
+                    <ul class="list-unstyled lh-lg">
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">Help center</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">Report a problem</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">Suggesting edits</a></li>
+                        <li class="mb-1"><a href="#" class="text-reset text-decoration-none">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-top border-1 border-secondary-subtle">
+            <div class="container">
+                <div class="row justify-content-between align-items-center py-5">
+                    <div class="copy-right col-md-12 col-lg-6 text-center">&copy; 2024 All rights reserved. Free HTML Template by <a
+                            href="#" class="text-reset text-decoration-none">TemplatesJungle</a></div>
+                    <div class="social col-md-12 col-lg-6 d-flex justify-content-end mt-md-3">
+                        <ul class="list-unstyled d-flex gap-3 mt-4 mt-lg-0">
+                            <li>
+                                <a href="#" class="d-block text-reset">
+                                    <i class="fa-brands fa-facebook-f facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-block text-reset">
+                                    <i class="fa-brands fa-twitter twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-block text-reset">
+                                    <i class="fa-brands fa-youtube youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-block text-reset">
+                                    <i class="fa-brands fa-behance behance"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
+
+    <!--Bootstrap CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Sweet Alert CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Main JS file-->
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
+
+
